@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Ejemplo_Segment_Control" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="TdW-Hv-uYm">
+                                <rect key="frame" x="20" y="60" width="374" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="A0r-Ns-MmC"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Lima"/>
+                                    <segment title="Arequipa"/>
+                                    <segment title="Cusco"/>
+                                </segments>
+                                <color key="tintColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="cityControlChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="BPh-um-w1K"/>
+                                </connections>
+                            </segmentedControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dig-wg-MBG">
+                                <rect key="frame" x="20" y="140" width="374" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="7f3-WM-tbt"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Cv4-Qb-ewW">
+                                <rect key="frame" x="20" y="470" width="374" height="256"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NqT-GN-ZRc">
+                                <rect key="frame" x="20" y="360" width="374" height="100"/>
+                                <color key="backgroundColor" red="0.80986941499999998" green="0.80986941499999998" blue="0.80986941499999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="LDk-fH-8h0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Cv4-Qb-ewW" secondAttribute="bottom" constant="10" id="0AZ-Gl-qUc"/>
+                            <constraint firstItem="NqT-GN-ZRc" firstAttribute="top" secondItem="dig-wg-MBG" secondAttribute="bottom" constant="20" id="3uG-wt-GDu"/>
+                            <constraint firstItem="Cv4-Qb-ewW" firstAttribute="top" secondItem="NqT-GN-ZRc" secondAttribute="bottom" constant="10" id="4SG-pI-xib"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cv4-Qb-ewW" secondAttribute="trailing" constant="20" id="4Zz-7O-kjL"/>
+                            <constraint firstItem="NqT-GN-ZRc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5xi-S2-XOk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TdW-Hv-uYm" secondAttribute="trailing" constant="20" id="PVk-AL-9fs"/>
+                            <constraint firstItem="TdW-Hv-uYm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="PqI-8k-DM8"/>
+                            <constraint firstItem="TdW-Hv-uYm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="jeo-MU-Zgy"/>
+                            <constraint firstItem="Cv4-Qb-ewW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ode-xV-GNu"/>
+                            <constraint firstItem="dig-wg-MBG" firstAttribute="top" secondItem="TdW-Hv-uYm" secondAttribute="bottom" constant="20" id="ou0-dT-Mvz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NqT-GN-ZRc" secondAttribute="trailing" constant="20" id="wYC-R5-1jy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dig-wg-MBG" secondAttribute="trailing" constant="20" id="yYG-j0-4Fs"/>
+                            <constraint firstItem="dig-wg-MBG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zcf-SV-JHf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cityControl" destination="TdW-Hv-uYm" id="H5e-KR-EZJ"/>
+                        <outlet property="imgContainer" destination="dig-wg-MBG" id="H0r-ic-ipj"/>
+                        <outlet property="lblCity" destination="NqT-GN-ZRc" id="qqb-t7-bac"/>
+                        <outlet property="txtDescription" destination="Cv4-Qb-ewW" id="2Nr-OR-zzV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="132.06521739130434"/>
+        </scene>
+    </scenes>
+</document>
